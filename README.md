@@ -1,5 +1,5 @@
-# Core-Infrastructure
-  **Core security infrastructure built to support hunkeelin.** 
+# Infrastructure
+  **Security infrastructure built to support hunkeelin.** 
 
 
 ## CircleCi
