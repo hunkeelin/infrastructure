@@ -1,7 +1,6 @@
 # Infrastructure
   **Security infrastructure built to support hunkeelin.** 
 
-
 ## CircleCi
 
 [![CircleCI](https://circleci.com/gh/hunkeelin/infrastructure.svg?style=shield)](https://circleci.com/gh/hunkeelin/infrastructure)
