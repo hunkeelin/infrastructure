@@ -3,6 +3,6 @@ module "core-infra-es" {
   name = "core-infra-es"
   vpc_id = module.vpc-west.vpc_id
   subnet_ids = module.vpc-west.private_subnets
-  instance_type = "t2.micro.elasticsearch" 
+# instance_type = "t2.micro.elasticsearch" 
 }
 
