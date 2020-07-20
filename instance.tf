@@ -48,30 +48,24 @@ resource "aws_key_pair" "infra-master" {
   public_key = var.authorized_key
 }
 
-resource "aws_instance" "bastion-host" {
-  ami             = data.aws_ami.amzn-ami.id
-  instance_type   = "t3.micro"
-  security_groups = [aws_security_group.allow_ssh.id, aws_security_group.egress-all.id]
-  subnet_id       = module.vpc-west.public_subnets[0]
-  key_name        = aws_key_pair.infra-master.id
-  lifecycle {
-    ignore_changes = [ami]
-  }
-  root_block_device {
-    volume_size           = "30"
-    delete_on_termination = true
-  }
-}
+# resource "aws_instance" "bastion-host" {
+#   ami             = data.aws_ami.amzn-ami.id
+#   instance_type   = "t3.micro"
+#   security_groups = [aws_security_group.allow_ssh.id, aws_security_group.egress-all.id]
+#   subnet_id       = module.vpc-west.public_subnets[0]
+#   key_name        = aws_key_pair.infra-master.id
+# }
+# 
+# resource "aws_eip" "bastion-eip" {
+#   vpc      = true
+#   instance = aws_instance.bastion-host.id
+# 
+#   tags = {
+#     Assignment = aws_instance.bastion-host.id
+#     Comment    = "Managed by Terraform"
+#   }
+# }
 
-resource "aws_eip" "bastion-eip" {
-  vpc      = true
-  instance = aws_instance.bastion-host.id
-
-  tags = {
-    Assignment = aws_instance.bastion-host.id
-    Comment    = "Managed by Terraform"
-  }
-}
 
 variable authorized_key {
   description = "The public ssh rsa key you generated"
