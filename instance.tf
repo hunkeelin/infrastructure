@@ -66,6 +66,7 @@ resource "aws_key_pair" "infra-master" {
 #   }
 # }
 
+
 variable authorized_key {
   description = "The public ssh rsa key you generated"
 }
