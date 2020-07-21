@@ -9,9 +9,9 @@ module "core-infra-es" {
   zone_awareness_enabled  = "true"
 
 
-  ebs_options{
-    ebs_enabled = true
-    volume_size = 11
+  ebs_options = {
+    ebs_enabled = "true"
+    volume_size = "12"
   }
 }
 
