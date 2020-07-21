@@ -7,6 +7,12 @@ module "core-infra-es" {
   instance_count = 2  
   encrypt_at_rest_enabled = true
   zone_awareness_enabled  = "true"
+
+
+  ebs_options{
+    ebs_enabled = true
+    volume_size = 11
+  }
 }
 
 
