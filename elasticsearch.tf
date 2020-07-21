@@ -2,9 +2,9 @@ module "core-infra-es" {
   source = "git::https://github.com/cloudposse/terraform-aws-elasticsearch.git?ref=master"
   name = "core-infra-es"
   vpc_id = module.vpc-west.vpc_id
-  subnet_ids = ["subnet-0b2e5acc58a5cf13a", "subnet-0518af873925f125c"] 
+  subnet_ids = module.vpc-west.private_subnets
   instance_type = "m5.large.elasticsearch"
-  instance_count = 2  
+  instance_count = 3  
   encrypt_at_rest_enabled = true
   zone_awareness_enabled  = "true"
   ebs_volume_size = "12"
