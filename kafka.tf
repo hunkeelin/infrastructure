@@ -23,9 +23,10 @@ module "msk" {
     kafka_version = "1.1.1"
     number_of_broker_nodes = "3"
     environment = var.dev 
-    subenets_id = module.vpc-west.private_subnets
+    subnets_id = module.vpc-west.private_subnets
     vpc_id = module.vpc-west.vpc_id
-    ebs_volume_size = "30"
+    ebs_volume_size = "7"
+    instance_type = "kafka.t3.small"
     
 }
 
