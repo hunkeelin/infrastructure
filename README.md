@@ -17,7 +17,7 @@
    - [Authenticate with Okta and kube2iam assume-role](https://github.com/TheOnly-Co/oktaasume)
    - Couple CICD with helm to deploy microservices 
    - Logging and monitoring with elaticsearch
-   - Deploy container services and work with Docker images     
+   - Deploy containerized services and work with Docker images     
  - [AWS amazon linux 2](https://aws.amazon.com/amazon-linux-2/)
    - Working with ami
 
