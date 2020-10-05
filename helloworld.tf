@@ -29,6 +29,7 @@ resource "aws_autoscaling_attachment" "asg_attachment" {
     alb_target_group_arn = aws_lb_target_group.alb-tg.arn
 }
 
+
 resource "aws_lb_listener" "helloworld-alb-listener" {
     load_balancer_arn = aws_lb.helloworld-alb.arn
     port = 80
