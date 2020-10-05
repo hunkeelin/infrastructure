@@ -13,7 +13,7 @@ module "core-infra-eks" {
   subnets         = module.vpc-west.private_subnets
   vpc_id          = module.vpc-west.vpc_id
   workers_group_defaults = {
-    target_group_arns = aws_lb_target_group.alb-tg.arn
+    target_group_arns = [aws_lb_target_group.alb-tg.arn]
   }
   map_roles = [
     {
