@@ -25,7 +25,7 @@ resource "aws_lb_target_group" "alb-tg" {
     }
 }
 resource "aws_autoscaling_attachment" "asg_attachment" {
-    autoscaling_group_name = module.core-infra-eks.workers_asg_names[0]
+    autoscaling_group_name = "infra-west-eks-02020071820291195310000000d"
     alb_target_group_arn = aws_lb_target_group.alb-tg.arn
 }
 
