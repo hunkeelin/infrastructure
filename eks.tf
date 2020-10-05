@@ -12,6 +12,9 @@ module "core-infra-eks" {
   cluster_version = "1.17"
   subnets         = module.vpc-west.private_subnets
   vpc_id          = module.vpc-west.vpc_id
+  workers_group_defaults = {
+    target_group_arns = aws_lb_target_group.alb-tg.arn
+  }
   map_roles = [
     {
       rolearn  = var.devops_admin_arn
@@ -29,7 +32,6 @@ module "core-infra-eks" {
       instance_type = "m5.large"
       asg_max_size  = 1
     }
-
   ]
 }
 variable devops_admin_arn {
