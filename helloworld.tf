@@ -17,9 +17,9 @@ resource "aws_lb_target_group" "alb-tg" {
     name = "alb-tg"
     vpc_id = module.vpc-west.vpc_id
     port = "32002"
-    protocol = "HTTP"
+    protocol = "TCP"
     health_check {
-        protocol = "HTTP"
+        protocol = "TCP"
         port = "32002"
         path = "/"
     }
