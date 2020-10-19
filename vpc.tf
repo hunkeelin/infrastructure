@@ -1,5 +1,5 @@
 module "vpc-west" {
-  source = "git::https://github.com/terraform-aws-modules/terraform-aws-vpc.git?ref=v2.38.0"
+  source = "git::https://github.com/terraform-aws-modules/terraform-aws-vpc.git?ref=v2.55.0"
   name   = "vpc-west"
   cidr   = "10.0.0.0/16"
   azs    = ["us-west-2a", "us-west-2b", "us-west-2c"]
