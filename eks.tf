@@ -1,4 +1,5 @@
 data "aws_eks_cluster" "cluster" {
+
   name = module.core-infra-eks.cluster_id
 }
 
