@@ -1,4 +1,5 @@
 data "aws_eks_cluster" "cluster" {
+
   name = module.core-infra-eks.cluster_id
 }
 
@@ -27,7 +28,7 @@ module "core-infra-eks" {
   worker_groups = [
     {
       instance_type = "m5.large"
-      asg_max_size  = 2
+      asg_max_size  = 2 
     }
 
   ]
