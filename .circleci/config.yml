@@ -18,10 +18,7 @@ workflows:
   version: 2
   plan-and-apply:
     jobs:
-      - plan:
-          filters:
-            branches: 
-              ignore: master
+      - plan
       - apply:
           requires:
             - plan
