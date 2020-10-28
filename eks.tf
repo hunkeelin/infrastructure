@@ -50,6 +50,5 @@ resource "aws_autoscaling_policy" "eks-asg-policy" {
   }
   scaling_adjustment     = 4
   adjustment_type        = "ChangeInCapacity"
-  cooldown               = 300
   policy_type            = "TargetTrackingScaling"
 }
