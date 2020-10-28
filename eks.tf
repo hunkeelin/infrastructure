@@ -35,3 +35,16 @@ module "core-infra-eks" {
 variable devops_admin_arn {
   description = "The arn of the devops admin access account"
 }
+
+
+
+resource "aws_autoscaling_policy" "eks-asg-policy" {
+  name                   = "eks-asg-policy"
+  autoscaling_group_name = module.core-infra-eks.workers_asg_names[0]
+  target_tracking_configuration {
+    predefined_metric_specification {
+      predefined_metric_type = "ASGAverageCPUUtilization"
+    }
+    target_value = 40.0
+  }
+}
