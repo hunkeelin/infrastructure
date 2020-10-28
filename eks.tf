@@ -28,8 +28,8 @@ module "core-infra-eks" {
   worker_groups = [
     {
       instance_type = "m5.large"
-      asg_max_size = 5
-      asg_desired_capacity = 4 
+      asg_max_size = 3
+      asg_desired_capacity = 2 
         
     }
 
@@ -48,7 +48,7 @@ resource "aws_autoscaling_policy" "eks-asg-policy" {
     }
     target_value = 75.0
   }
-  scaling_adjustment     = 4
+
   adjustment_type        = "ChangeInCapacity"
   policy_type            = "TargetTrackingScaling"
 }
