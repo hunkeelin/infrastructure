@@ -46,6 +46,10 @@ resource "aws_autoscaling_policy" "eks-asg-policy" {
     predefined_metric_specification {
       predefined_metric_type = "ASGAverageCPUUtilization"
     }
-    target_value = 40.0
+    target_value = 75.0
   }
+  scaling_adjustment     = 4
+  adjustment_type        = "ChangeInCapacity"
+  cooldown               = 300
+
 }
