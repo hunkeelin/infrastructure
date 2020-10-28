@@ -48,7 +48,6 @@ resource "aws_autoscaling_policy" "eks-asg-policy" {
     }
     target_value = 75.0
   }
-  scaling_adjustment     = 4
   adjustment_type        = "ChangeInCapacity"
   policy_type            = "TargetTrackingScaling"
 }
