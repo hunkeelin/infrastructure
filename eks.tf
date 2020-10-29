@@ -28,7 +28,9 @@ module "core-infra-eks" {
   worker_groups = [
     {
       instance_type = "m5.large"
-      asg_max_size  = 2 
+      asg_max_size = 3
+      asg_desired_capacity = 2 
+        
     }
 
   ]
@@ -36,7 +38,6 @@ module "core-infra-eks" {
 variable devops_admin_arn {
   description = "The arn of the devops admin access account"
 }
-
 
 
 resource "aws_autoscaling_policy" "eks-asg-policy" {
@@ -48,6 +49,9 @@ resource "aws_autoscaling_policy" "eks-asg-policy" {
     }
     target_value = 75.0
   }
+
   adjustment_type        = "ChangeInCapacity"
   policy_type            = "TargetTrackingScaling"
 }
+
+
