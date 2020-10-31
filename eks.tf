@@ -31,7 +31,6 @@ module "core-infra-eks" {
       instance_type = "m5.large"
       asg_max_size = 4
       asg_desired_capacity = 2
-      public_ip = true    
     }
 
   ]
@@ -51,7 +50,6 @@ resource "aws_autoscaling_policy" "eks-asg-policy" {
     target_value = 75.0
   }
 
-  adjustment_type        = "ChangeInCapacity"
   policy_type            = "TargetTrackingScaling"
 }
 
