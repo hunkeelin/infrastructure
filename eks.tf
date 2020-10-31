@@ -28,10 +28,16 @@ module "core-infra-eks" {
   worker_groups_launch_tempalte = [
     {
       instance_type = "m5.large"
+<<<<<<< HEAD
       asg_max_size = 4
       asg_desired_capacity = 2
       public_ip = true 
         
+=======
+      asg_max_size = 3
+      asg_desired_capacity = 2 
+      
+>>>>>>> 8322bd5c44d2f2f4202f56f6cf58d6b18dcac9cb
     }
 
   ]
