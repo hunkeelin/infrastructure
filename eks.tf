@@ -25,7 +25,7 @@ module "core-infra-eks" {
       groups   = ["system:nodes", "system:bootstrappers"]
     }
   ]
-  worker_groups = [
+  worker_groups_launch_template = [
     {
       instance_type = "m5.large"
       asg_max_size = 3
