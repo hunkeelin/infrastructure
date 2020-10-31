@@ -9,13 +9,13 @@
  - Configure `config.yml` to allow asynchronous updates with github
  - Staging commands to plan/apply jobs to the master branch
 
-## AWS
+## Amazon Web Services (AWS)
  - Virtual Private Cloud
    - Setup VPC routing between accounts and vendors with transit gateways
    - Provision components with terraform
    - Scale across the infrastructure to allow high availability
  - Elastic Kubernetes Service (EKS)
-   - Setup RBAC to allow specific user accessibility 
+   - Setup RBAC to allow specific user to access  
    - [Authenticate with Okta and kube2iam assume-role](https://github.com/TheOnly-Co/oktaasume)
    - Couple CICD with helm to deploy microservices 
    - Logging and monitoring with elaticsearch
