@@ -13,6 +13,7 @@ module "core-infra-eks" {
   cluster_version = "1.17"
   subnets         = module.vpc-west.private_subnets
   vpc_id          = module.vpc-west.vpc_id
+  write_kubeconfig = false
   map_roles = [
     {
       rolearn  = var.devops_admin_arn
@@ -30,7 +31,7 @@ module "core-infra-eks" {
       instance_type = "m5.large"
       asg_max_size = 4
       asg_desired_capacity = 2
-
+      public_ip = true    
     }
 
   ]
