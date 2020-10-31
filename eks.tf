@@ -28,9 +28,9 @@ module "core-infra-eks" {
   worker_groups = [
     {
       instance_type = "m5.large"
-      asg_max_size = 4
-      asg_desired_capacity = 3 
-        
+      asg_max_size = 3
+      asg_desired_capacity = 2 
+      
     }
 
   ]
