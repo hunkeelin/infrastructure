@@ -39,6 +39,7 @@ variable devops_admin_arn {
   description = "The arn of the devops admin access account"
 }
 
+
 resource "aws_autoscaling_policy" "eks-asg-policy" {
   name                   = "eks-asg-policy"
   autoscaling_group_name = module.core-infra-eks.workers_asg_names[0]
@@ -52,4 +53,5 @@ resource "aws_autoscaling_policy" "eks-asg-policy" {
   adjustment_type        = "ChangeInCapacity"
   policy_type            = "TargetTrackingScaling"
 }
+
 
