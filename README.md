@@ -7,7 +7,7 @@
 
 [![CircleCI](https://circleci.com/gh/hunkeelin/infrastructure.svg?style=shield)](https://circleci.com/gh/hunkeelin/infrastructure)
  - Configure `config.yml` to allow asynchronous updates with github
- - Staging commands to plan/apply jobs to the master branch
+ - Staging to plan/apply and delivery workflows to production 
 
 ## Amazon Web Services (AWS)
  - Virtual Private Cloud
