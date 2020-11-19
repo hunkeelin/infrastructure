@@ -30,7 +30,7 @@ module "core-infra-eks" {
     {
       instance_type = "m5.large"
       asg_max_size = 3
-      
+      asg_desired_capacity = 2 
     }
 
   ]
@@ -47,7 +47,7 @@ resource "aws_autoscaling_policy" "eks-asg-policy" {
     predefined_metric_specification {
       predefined_metric_type = "ASGAverageCPUUtilization"
     }
-    target_value = 75.0
+    target_value = 50.0
   }
 
   policy_type            = "TargetTrackingScaling"
