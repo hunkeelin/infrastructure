@@ -32,8 +32,8 @@ module "core-infra-eks" {
 #       asg_max_size = 3
 #       asg_desired_capacity = 2 
 #     }
-
-  ]
+#
+#  ]
 }
 variable devops_admin_arn {
   description = "The arn of the devops admin access account"
