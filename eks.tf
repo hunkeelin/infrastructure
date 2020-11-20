@@ -27,14 +27,14 @@ module "core-infra-eks" {
     }
   ]
 
-#   worker_groups_launch_template = [
-#     {
-#       instance_type = "m5.large"
-#       asg_max_size = 3
-#       asg_desired_capacity = 2 
-#     }
-#
-#  ]
+  worker_groups_launch_template = [
+    {
+      instance_type = "m5.large"
+      asg_max_size = 3
+      asg_desired_capacity = 2 
+    }
+
+  ]
 
 
   
