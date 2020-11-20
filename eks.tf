@@ -33,6 +33,8 @@ module "core-infra-eks" {
 #       asg_max_size = 3
 #       asg_desired_capacity = 2 
 #     }
+#
+#  ]
 
 
   ]
