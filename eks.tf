@@ -37,7 +37,7 @@ module "core-infra-eks" {
 #  ]
 
 
-  ]
+  
 }
 variable devops_admin_arn {
   description = "The arn of the devops admin access account"
