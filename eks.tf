@@ -26,6 +26,7 @@ module "core-infra-eks" {
       groups   = ["system:nodes", "system:bootstrappers"]
     }
   ]
+
 #   worker_groups_launch_template = [
 #     {
 #       instance_type = "m5.large"
@@ -34,6 +35,9 @@ module "core-infra-eks" {
 #     }
 #
 #  ]
+
+
+  ]
 }
 variable devops_admin_arn {
   description = "The arn of the devops admin access account"
