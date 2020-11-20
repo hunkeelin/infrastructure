@@ -26,12 +26,15 @@ module "core-infra-eks" {
       groups   = ["system:nodes", "system:bootstrappers"]
     }
   ]
-  worker_groups_launch_template = [
-    {
-      instance_type = "m5.large"
-      asg_max_size = 3
-      asg_desired_capacity = 2 
-    }
+
+#   worker_groups_launch_template = [
+#     {
+#       instance_type = "m5.large"
+#       asg_max_size = 3
+#       asg_desired_capacity = 2 
+#     }
+
+
   ]
 }
 variable devops_admin_arn {
