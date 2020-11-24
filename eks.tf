@@ -39,10 +39,10 @@ module "core-infra-eks" {
 
   
 }
+
 variable devops_admin_arn {
   description = "The arn of the devops admin access account"
 }
-
 
 resource "aws_autoscaling_policy" "eks-asg-policy" {
   name                   = "eks-asg-policy"
