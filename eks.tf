@@ -23,7 +23,7 @@ module "core-infra-eks" {
     {
       rolearn  = module.core-infra-eks.worker_iam_role_arn
       username = "system:node:{{EC2PrivateDNSName}}"
-      groups   = ["system:nodes", "system:bootstrappers"]
+      groups   = ["system:nodes","system:bootstrappers"]
     }
   ]
 
