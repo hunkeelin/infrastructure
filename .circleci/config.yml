@@ -19,10 +19,13 @@ workflows:
   plan-and-apply:
     jobs:
       - plan
-      - apply:
+      - apply-approve:
           type: approval
           requires:
             - plan
-          filters:
-            branches:
-              only: master
+      - apply:
+          requires:
+            - apply-approve
+#          filters:
+#            branches:
+#              only: master
