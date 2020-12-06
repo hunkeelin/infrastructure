@@ -31,7 +31,7 @@ module "core-infra-eks" {
     {
       instance_type = "m5.large"
       asg_max_size = 3
-      asg_desired_capacity = 2 
+      asg_desired_capacity = 1 
     }
 
   ]
