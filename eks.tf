@@ -13,9 +13,6 @@ module "core-infra-eks" {
   cluster_version = "1.17"
   subnets         = module.vpc-west.private_subnets
   vpc_id          = module.vpc-west.vpc_id
-  workers_group_defaults = {
-    target_group_arns = [aws_lb_target_group.helloworld-alb-tg.arn]
-  }
   write_kubeconfig = false
   map_roles = [
     {
