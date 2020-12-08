@@ -59,5 +59,3 @@ resource "aws_autoscaling_policy" "eks-asg-policy" {
 
   policy_type = "TargetTrackingScaling"
 }
-
-
