@@ -17,11 +17,11 @@ resource "aws_security_group" "allow-http" {
 resource "aws_lb_target_group" "helloworld-alb-tg" {
   name     = "helloworld-alb-tg"
   vpc_id   = module.vpc-west.vpc_id
-  port     = "32002"
+  port     = var.helloworld-port
   protocol = "HTTP"
   health_check {
     protocol = "HTTP"
-    port     = "32002"
+    port     = var.helloworld-port
     path     = "/"
   }
 }
@@ -44,9 +44,9 @@ resource "aws_lb_listener" "helloworld-alb-listener" {
 resource "aws_security_group_rule" "helloworld-nodeport-sg" {
   description       = "Allow helloworld ingress"
   type              = "ingress"
-  from_port         = 32002
+  from_port         = var.helloworld-port
   cidr_blocks       = ["10.0.0.0/16"]
-  to_port           = 32002
+  to_port           = var.helloworld-port
   protocol          = "tcp"
   security_group_id = module.core-infra-eks.worker_security_group_id
 }
