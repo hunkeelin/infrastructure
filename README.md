@@ -31,7 +31,7 @@
 
 ## Infrastructure Design
 
-<img src="TheOnly-Co.png" height= "400" width="520" >
+<img src="TheOnly-co.png" height= "400" width="520" >
 
 ## Lincense
 
