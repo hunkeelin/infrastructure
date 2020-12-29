@@ -28,3 +28,11 @@
  - Implement AWS roles and permissions with Okta SAML authentication
  - Enforce MFA Okta push notification on users
  - Tie Okta users login to IAM role based access
+
+## Infrastructure Design
+
+<img src="TheOnly-Co.png" height= "400" width="520" >
+
+## Lincense
+
+Copyright (c) 2021 TheOnly-Co
