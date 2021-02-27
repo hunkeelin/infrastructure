@@ -52,6 +52,7 @@ resource "aws_autoscaling_policy" "eks-asg-policy" {
       predefined_metric_type = "ASGAverageCPUUtilization"
     }
     target_value = 50.0
+    diable_scale_in = true
   }
 
   policy_type            = "TargetTrackingScaling"
