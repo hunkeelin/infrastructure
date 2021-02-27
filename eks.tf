@@ -32,15 +32,15 @@ module "core-infra-eks" {
 
   worker_groups_launch_template = [
     {
-      instance_type = "m5.large"
-      asg_max_size = 3
+      instance_type        = "m5.large"
+      asg_max_size         = 3
       asg_desired_capacity = 2
     }
 
   ]
 
 
-  
+
 }
 
 variable devops_admin_arn {
@@ -57,7 +57,5 @@ resource "aws_autoscaling_policy" "eks-asg-policy" {
     target_value = 50.0
   }
 
-  policy_type            = "TargetTrackingScaling"
+  policy_type = "TargetTrackingScaling"
 }
-
-
